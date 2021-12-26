@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'maruBold';
+  src: url('maruBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'maruRegular';
+  src: url('maruRegular.woff2') format('woff2');
+}
+
+h1{
+  font-family: 'maruBold', sans-serif;
+  font-size: 6.2vw;
+}
+
+.bodyText{
+  margin: 10%;
+  width: auto;
+  font-family: 'maruRegular', sans-serif;
+  /* font-weight: 700; */
+  font-size: 4vw;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+a{
+  /* text-decoration: underline; */
+  font-family: 'maruBold', sans-serif;
+  text-decoration-style: wavy;
+  color: #AB1B69;
+  text-shadow: .2vw .2vw #F9AAA5;
+  /* background: -webkit-linear-gradient(#9EF2B6, #90C7E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 500% 500%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: 3;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

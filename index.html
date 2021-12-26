@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>🎂🎂🎂</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+
+        // for starting the confetti
+
+        const start = () => {
+            setTimeout(function() {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  for stopping the confetti
+
+        const stop = () => {
+            setTimeout(function() {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+// after this here we are calling both the function so it works
+        start();
+        stop();
+
+// if you dont want to make it stop and make it infinite you can just remove the stop function
+    </script>
+  </head>
+  <body>
+    <div class="bodyText">
+    <span class="dancing">♪┏( ・o･)┛ ♪ ┗ ( ･o･) ┓♪</span> <br>
+    <h1><span class="wave">🎉</span> Happy Birthday!!! <span class="wave">🎉</span></h1>
+    <br>
+    👋 Heyyy bb,<br>
+    First of all, happy freakin bday you sweet sweet boy!! Second of all, the original intent of this "e-card" was to give you the domain tavodam.com, but seems like you already own it!! The secondary intent was to give you the ~~official~~ promise of a website designed and built by me. 🙂 I know we’ve talked about it in the past but wanted to solidify it as a winter lockdown activity hehe. I started putting together a moodboard of sorts <a href='https://www.are.na/share/uYCyyAs'>here</a>, but obvi the idea is that we design it together.
+    <br><br>
+    Your other more tangible gift is a reservation at <a href='https://www.tempuramatsui.com/'>Tempura Matsui</a> on Jan 9 for some tempura-focused omakase 🍤🍤🍤, given the city doesn’t continue being a fiery breeding ground for infection 🦠 (and if it is, we’ll reschedule!!).
+    <br><br>
+    Love you so so much ❤️,
+    <br>
+    César
+    <br><br>
+    <span class="dancing">♪┏( ・o･)┛ ♪ ┗ ( ･o･) ┓♪</span> <br><br>
+
+
+    <script>
+    var $dancing = $(".dancing");
+    var moves = ["♪┏( ・o･)┛ ♪ ┗ (･o･ ) ┓♪", "♪┗( ・o･)┓ ♪ ┏ (･o･ ) ┛♪", "♪┏(・o･ )┛ ♪ ┗ ( ･o･) ┓♪", "♪┗(・o･ )┓ ♪ ┏ ( ･o･) ┛♪", ];
+
+    function animationLoop() {
+    for (var i = 0; i <= 4000; ++i) {
+      (function(index) {
+        setTimeout(function() {
+          $dancing.html(moves[(index%4)-1]);
+        }, i * 500);
+      })(i);
+    }
+  i = 0;
+  }
+
+
+  animationLoop();
+
+
+
+    </script>
+
+    <script src="confetti.js"></script>
+
+  </div>
+  </body>
+</html>
